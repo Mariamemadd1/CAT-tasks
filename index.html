@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Portfilio</title>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+       
+    </header>
+    <section class="present">
+<div class="p1">
+    <h1>
+        Hello ! i am Mariam Emad 
+    </h1>
+            <p>
+                I'm a passionate and dedicated <span class="s">Back-end </span>Developer with a deep love for technology and design. 
+            </p>
+            <div class="links">
+                <a href="">contact me</a>
+            <a href="">Resume</a>
+            </div>
+        </div>
+        <div class="im">
+            <img  src="imgs/gummy-programming.png" alt="" class="im">
+        </div>
+        
+    </section>
+    
+  
+    <section class="about">
+        <div class="ab">
+            <h1>About Me</h1>
+            <p>A hardworking and enthasiastic second-year Computer Sceince strudent at Mansoura Unversity.</p>
+            <p>Passionate about Web Development , programming . with a growing understanding with
+                problem solving , data strucutre , database.</p>
+            
+            <p>Eager to learn and gain practical experience to build a succesful career in computer science field .</p>
+                <p>skilled in teamwork and adapting to new challenges</p></div>
+       <img  src="imgs/coding-3-4.png" alt="" class="im1">
+    </section>
+    <section class="services">
+    <h1>My Services</h1>
+    <div class="ss">
+        <div class="s1">
+            <p class="bx"><i class='bx bx-code-alt'></i></p>
+            <p>Clean Code</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, voluptatum?</p>
+        </div>
+        <div class="s1"><p class="bx"><i class='bx bx-support'></i></p>
+            <p>Customer Support</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, sapiente?</p></div>
+        <div class="s1"><p class="bx"><i class='bx bxl-sketch' ></i></p>
+            <p>Creative Design</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, asperiores.</p></div>
+        <div class="s1"><p class="bx"><i class='bx bxs-lock'></i></p>
+            <p>Security</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, consequatur.</p></div>
+    </div>
+    </section>
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <label for="name">Name</label>
+            <input type="text" id="name"  >
+            <label for="email">Email</label>
+            <input type="email" id="email"  >
+            <label for="message">Message</label>
+            <textarea id="message"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <button id="chng" onclick="changeBackground()">Change Background</button>
+        <button id="upButton">↑</button>
+    </section>
+</body>
+   <script>
+    function changeBackground() {
+        document.querySelector("header").style.backgroundColor = "#5f6769"; 
+    }
+</script>
+<script >
+    const upButton = document.getElementById("upButton");
+  window.onscroll = function () {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          upButton.style.display = "block";
+      } else {
+          upButton.style.display = "none";
+      }
+  };
+  upButton.onclick = function () {
+      window.scrollTo({
+          top: 0,
+          behavior: "smooth", 
+      });
+  };
+ </script>
+ <script>
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', function(event) {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        if (!name || !email || !message) {
+            alert('Please fill out all fields.');
+        }
+    });
+ </script>
+</html>
